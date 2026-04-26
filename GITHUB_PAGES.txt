@@ -1,0 +1,33 @@
+GitHub Pages (static HTML export)
+=================================
+
+1. Create a GitHub repository and push this project (repo root = these files).
+
+2. Repo → Settings → Pages → Build and deployment → Source: GitHub Actions.
+
+3. Push to `main` or `master` (or run the workflow manually). The workflow
+   `.github/workflows/github-pages.yml` builds with `output: 'export'` and
+   uploads the `out/` folder.
+
+4. After deploy, the site is at:
+   - Project repo: https://<owner>.github.io/<repo>/
+   - User site repo named <user>.github.io: https://<user>.github.io/
+
+5. Embed on another site (replace OWNER and REPO):
+
+   <iframe
+     src="https://OWNER.github.io/REPO/"
+     title="AUI prototypes"
+     width="420"
+     height="920"
+     style="border:0;border-radius:24px;max-width:100%"
+     loading="lazy"
+   ></iframe>
+
+6. Local static build (optional): from this folder,
+   npm ci && npm run build
+   then serve the `out/` directory with any static file server.
+
+7. Subpath preview locally:
+   BASE_PATH=/my-repo npm run build
+   (Use the same path segment as your GitHub repo name.)
