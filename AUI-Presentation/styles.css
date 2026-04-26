@@ -1,0 +1,414 @@
+/* =========================================================
+   AUI Case Study - Design Tokens & Base Styles
+   ========================================================= */
+
+/* ---------- @font-face ---------- */
+@font-face {
+  font-family: 'F37 Lineca';
+  src: url('fonts/F37Lineca-VF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Planar';
+  src: url('fonts/GT-Planar-Light-Trial-BF63bcd77b74df6.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Planar';
+  src: url('fonts/GT-Planar-Regular-Trial-BF63bcd9a5c44bb.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Planar';
+  src: url('fonts/GT-Planar-Medium-Trial-BF63bcd77600d58.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GT Planar';
+  src: url('fonts/GT-Planar-Bold-Trial-BF63bcd77557486.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('fonts/DepartureMono-Regular.woff2') format('woff2'),
+       url('fonts/DepartureMono-Regular.woff') format('woff');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --space:        #121212;
+  --space-2:      #0E0E0E;
+  --eerie:        #1B1918;
+  --eerie-2:      #161616;
+  --stroke-dark:  #373633;
+  --stroke-light: #C4C4B7;
+  --mist:         #F1F0E0;
+  --mist-90:      rgba(241,240,224,0.90);
+  --mist-80:      rgba(241,240,224,0.80);
+  --mist-70:      rgba(241,240,224,0.78);
+  --mist-60:      rgba(241,240,224,0.68);
+  --mist-50:      rgba(241,240,224,0.60);
+  --mist-40:      rgba(241,240,224,0.56);
+  --mist-30:      rgba(241,240,224,0.30);
+  --mist-15:      rgba(241,240,224,0.15);
+  --mist-10:      rgba(241,240,224,0.10);
+  --mist-05:      rgba(241,240,224,0.05);
+  --fire:         rgba(255, 72, 0, 1);
+  --fire-light:   #F34E0E;
+  --fire-10:      rgba(255,72,0,0.10);
+  --fire-05:      rgba(255,72,0,0.05);
+  --nebula:       #A0CAF1;
+  --nebula-10:    rgba(160,202,241,0.10);
+  --nebula-08:    rgba(160,202,241,0.08);
+  --nebula-06:    rgba(160,202,241,0.06);
+}
+
+/* TYPE_SCALE @ 1920x1080  - projection-appropriate */
+/* hero/display 128, h1 96, h2 64, h3 44, body 28, small 22, label 16 */
+
+/* SPACING base 4px scale */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: var(--space);
+  color: var(--mist);
+  font-family: 'GT Planar', system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection { background: var(--fire); color: var(--mist); }
+
+/* ---------- Typography ---------- */
+.h-display {
+  font-family: 'F37 Lineca', Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  color: var(--mist);
+}
+div.h-display {
+  max-width: 1036px;
+}
+.h-title {
+  font-family: 'F37 Lineca', Georgia, serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  color: var(--mist);
+}
+.h-section {
+  font-family: 'F37 Lineca', Georgia, serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  color: var(--mist);
+}
+.body {
+  font-family: 'GT Planar', system-ui, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  color: var(--mist-80);
+}
+.body-strong {
+  font-family: 'GT Planar', system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.45;
+  color: var(--mist);
+}
+.mono {
+  font-family: 'Departure Mono', ui-monospace, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 16px;
+  color: var(--mist-60);
+}
+.mono-fire { color: var(--fire); }
+.mono-nebula { color: var(--nebula); }
+.mono-mist40 { color: var(--mist-40); }
+
+/* ---------- Slide frame ---------- */
+deck-stage section {
+  background: var(--space);
+  color: var(--mist);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-pad {
+  position: absolute;
+  inset: 0;
+  padding: 88px 112px 80px 112px;
+}
+
+.slide-pad-tight {
+  position: absolute;
+  inset: 0;
+  padding: 64px 96px 64px 96px;
+}
+
+/* Page-corner meta - uniform across slides */
+.corner-tl, .corner-tr, .corner-bl, .corner-br {
+  position: absolute;
+  font-family: 'Departure Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: var(--mist-40);
+}
+.corner-tl { top: 40px; left: 56px; }
+.corner-tr { top: 40px; right: 56px; }
+.corner-bl { bottom: 36px; left: 56px; }
+.corner-br { bottom: 36px; right: 56px; }
+
+/* ---------- Section label ---------- */
+.section-label {
+  font-family: 'Departure Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  color: var(--fire);
+}
+
+/* ---------- Card surfaces ---------- */
+.card {
+  background: var(--eerie);
+  border: 1px solid var(--mist-10);
+  border-radius: 16px;
+}
+.card-elev {
+  background: var(--eerie-2);
+  border: 1px solid var(--mist-10);
+  border-radius: 16px;
+}
+.card-ai {
+  background: var(--nebula-06);
+  border: 1px solid var(--mist-10);
+  border-left: 2px solid var(--nebula);
+  border-radius: 12px;
+}
+
+/* ---------- AI tag ---------- */
+.ai-tag {
+  display: inline-block;
+  font-family: 'Departure Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--nebula);
+  background: var(--nebula-10);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.fire-chip {
+  display: inline-block;
+  font-family: 'Departure Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist);
+  background: var(--fire);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.ghost-chip {
+  display: inline-block;
+  font-family: 'Departure Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mist-70);
+  background: var(--mist-05);
+  border: 1px solid var(--mist-15);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-fire {
+  font-family: 'GT Planar', sans-serif;
+  font-weight: 500;
+  background: var(--fire);
+  color: var(--mist);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+.btn-ghost {
+  font-family: 'GT Planar', sans-serif;
+  font-weight: 400;
+  background: transparent;
+  color: var(--mist);
+  border: 1px solid var(--mist-20, rgba(241,240,224,0.20));
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+/* ---------- Mesh + grain layer ---------- */
+.mesh-fire-nebula {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(40% 32% at 18% 24%, rgba(255,72,0,0.18) 0%, rgba(255,72,0,0) 70%),
+    radial-gradient(36% 28% at 82% 72%, rgba(160,202,241,0.16) 0%, rgba(160,202,241,0) 72%),
+    radial-gradient(60% 50% at 50% 110%, rgba(255,72,0,0.10) 0%, rgba(255,72,0,0) 70%);
+  pointer-events: none;
+}
+
+/* Thank-you slide (18+): fire-only mesh, no nebula wash */
+.mesh-thank-you {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(40% 32% at 18% 24%, rgba(255,72,0,0.18) 0%, rgba(255,72,0,0) 70%),
+    radial-gradient(36% 28% at 82% 72%, rgba(255,72,0,0.14) 0%, rgba(255,72,0,0) 72%),
+    radial-gradient(60% 50% at 50% 110%, rgba(255,72,0,0.12) 0%, rgba(255,72,0,0) 70%);
+  pointer-events: none;
+}
+.mesh-soft {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(50% 40% at 20% 30%, rgba(255,72,0,0.08) 0%, rgba(255,72,0,0) 70%),
+    radial-gradient(40% 32% at 85% 70%, rgba(160,202,241,0.07) 0%, rgba(160,202,241,0) 72%);
+  pointer-events: none;
+}
+
+.dot-grid {
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(241,240,224,0.06) 1px, transparent 1.4px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  mask-image: linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.25));
+}
+
+/* ---------- Phone frame ---------- */
+.phone {
+  background: #0A0A0A;
+  border: 2px solid var(--mist-15);
+  border-radius: 36px;
+  padding: 14px 12px 16px 12px;
+  position: relative;
+}
+.phone-statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Departure Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--mist-60);
+  padding: 2px 10px 8px 10px;
+  text-transform: uppercase;
+}
+.phone-screen {
+  background: #0A0A0A;
+  border-radius: 24px;
+  height: calc(100% - 32px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pulse for AI signal */
+@keyframes aiPulse {
+  0%, 100% { opacity: 0.55; transform: scale(0.97); }
+  50%      { opacity: 1;    transform: scale(1); }
+}
+.ai-pulse {
+  animation: aiPulse 1.8s ease-in-out infinite;
+}
+
+/* Slow fire dot pulse */
+@keyframes firePulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.92); }
+  50%      { opacity: 1;   transform: scale(1.05); }
+}
+.fire-pulse {
+  animation: firePulse 2.4s ease-in-out infinite;
+}
+
+/* Slide-up */
+@keyframes slideUp16 {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* On-active stagger entrance */
+deck-stage section[data-active] .anim-up {
+  animation: slideUp16 600ms cubic-bezier(.2,.7,.2,1) both;
+}
+deck-stage section[data-active] .anim-up.d1 { animation-delay: 80ms; }
+deck-stage section[data-active] .anim-up.d2 { animation-delay: 160ms; }
+deck-stage section[data-active] .anim-up.d3 { animation-delay: 240ms; }
+deck-stage section[data-active] .anim-up.d4 { animation-delay: 320ms; }
+deck-stage section[data-active] .anim-up.d5 { animation-delay: 400ms; }
+deck-stage section[data-active] .anim-up.d6 { animation-delay: 480ms; }
+
+/* Hairline rule */
+.hairline { height: 1px; background: var(--stroke-dark); width: 100%; }
+
+/* ---------- Annotations (design-spec callouts) ---------- */
+.callout {
+  font-family: 'Departure Mono', monospace;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--fire);
+}
+.callout-line {
+  background: var(--fire);
+  height: 1px;
+}
+
+/* ---------- Tables ---------- */
+.metric-row {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr 1.4fr;
+  align-items: center;
+  padding: 16px 20px;
+  border-top: 1px solid var(--mist-10);
+}
+.metric-row:nth-child(even) {
+  background: rgba(255,255,255,0.012);
+}
+
+/* Number markers */
+.num-fire {
+  font-family: 'Departure Mono', monospace;
+  color: rgba(255, 72, 0, 1);
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+.num-mid {
+  font-family: 'Departure Mono', monospace;
+  color: var(--fire);
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+/* Grain texture utility - applied via inline svg in components */

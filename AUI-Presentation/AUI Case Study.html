@@ -1,0 +1,1455 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AUI - Product Designer Assignment · Maya Harpak</title>
+<link rel="stylesheet" href="styles.css">
+<script src="deck-stage.js"></script>
+
+<!-- Reusable grain SVG used across illustrations -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="aui-grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+</svg>
+
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+<!-- ========================================================
+     SLIDE 01 - COVER
+     ======================================================== -->
+<section data-label="01 Cover">
+  <div class="mesh-fire-nebula"></div>
+  <div class="dot-grid"></div>
+
+  <!-- Faint phone silhouette in background -->
+  <svg width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid meet"
+       style="position:absolute; inset:0; opacity:0.55;" aria-hidden="true">
+    <rect x="1480" y="180" width="320" height="720" rx="44" ry="44"
+          fill="none" stroke="#373633" stroke-width="1.5"/>
+    <rect x="1500" y="200" width="280" height="680" rx="30" ry="30"
+          fill="none" stroke="#2a2826" stroke-width="1"/>
+    <circle cx="1640" cy="848" r="18" fill="none" stroke="#373633" stroke-width="1"/>
+  </svg>
+
+  <!-- Grain overlay -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.28;mix-blend-mode:overlay">
+    <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+  </svg>
+
+  <div class="corner-tl mono anim-up d1">AUI - Product Designer Assignment</div>
+  <div class="corner-tr mono anim-up d1">2026 / 04</div>
+
+  <div style="position:absolute; left:112px; right:112px; top:50%; transform:translateY(-50%);">
+    <div class="anim-up d2" style="font-family:'Departure Mono',monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:18px; color:var(--fire); margin-bottom:32px;">
+      Product Designer Assignment
+    </div>
+    <h1 class="h-display anim-up d3" style="font-size:124px; margin:0; max-width:1500px;">
+      AI Features for<br/>a Phone App
+    </h1>
+    <div class="anim-up d4" style="margin-top:48px; font-family:'GT Planar',sans-serif; font-weight:300; font-size:28px; color:var(--mist-70); max-width:920px; line-height:1.4;">
+      Designing an AI layer that earns trust before it acts,<br/>one consent at a time.
+    </div>
+  </div>
+
+  <div class="corner-bl mono anim-up d5">Maya Harpak · Product Designer · April 2026</div>
+  <div class="corner-br mono anim-up d5" style="color:var(--mist-60);">AUI<span style="color:var(--fire); margin-left:6px;">●</span></div>
+</section>
+
+<!-- ========================================================
+     SLIDE 02 - THE BRIEF
+     ======================================================== -->
+<section data-label="02 The Brief">
+  <div class="slide-pad" style="display:grid; grid-template-columns: 360px 1fr; gap:96px;">
+
+    <div class="anim-up d1">
+      <div class="section-label">02 / The Brief</div>
+      <div class="mono" style="margin-top:24px; color:var(--mist-40); font-size:13px; max-width:300px; line-height:1.7;">
+        Take-home: 2+ AI concepts in everyday phone use, end-to-end flow, KPIs, process + rationale; Figma hi-fi (prototype optional).
+      </div>
+    </div>
+
+    <div style="max-width:1080px;">
+      <h2 class="h-section anim-up d1" style="font-size:64px; margin:0 0 48px 0;">
+        Design AI features for<br/>a phone app, but answer<br/>a harder question first.
+      </h2>
+
+      <p class="body anim-up d2" style="font-size:24px; max-width:920px; margin:0 0 56px 0;">
+        The brief was open: reimagine how AI can enhance simple, everyday phone app features:
+        making a call, managing contacts, or interacting during a call.
+      </p>
+
+      <!-- Pull quote -->
+      <div class="anim-up d3" style="
+        border-radius: 16px;
+        box-shadow: 0 0 0 1.5px var(--fire);
+        background: var(--fire-05);
+        padding: 32px 40px;
+        max-width: 1040px;
+        font-family: 'F37 Lineca', serif;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.25;
+        color: var(--mist);
+        letter-spacing:-0.01em;
+      ">
+        Before touching a single screen, I needed to answer<br/>
+        a harder question: <span style="color:var(--fire);">why do most AI features in phone apps feel unnecessary?</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">02 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 03 - COMPETITIVE LANDSCAPE
+     ======================================================== -->
+<section data-label="03 The Space">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">03 / Understanding the Space</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1.4fr; gap:80px; align-items:start;">
+
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:60px; margin:0 0 32px 0;">
+          Everyone has the features. No one<br/>has the moments.
+        </h2>
+        <p class="body anim-up d2" style="font-size:20px; max-width:520px; margin:0 0 28px 0;">
+          Pixel screens calls. iOS transcribes voicemails. Samsung translates.
+          Truecaller blocks spam. The capability surface is crowded.
+        </p>
+        <p class="body anim-up d3" style="font-size:20px; max-width:520px; margin:0 0 28px 0;">
+          What's missing is the <span class="body-strong" style="color:var(--mist);">moment between people</span>,
+          the warmth of context before a call, the silent assist during it, the handoff afterwards
+          when you can't write things down.
+        </p>
+        <div class="mono anim-up d4" style="margin-top:36px; color:var(--fire);">The gap is human, not technical.</div>
+      </div>
+
+      <!-- Bento grid: 4 competitors + 1 gap -->
+      <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap:18px; height:660px;">
+
+        <div class="card anim-up d2" style="padding:24px 26px; position:relative; overflow:hidden;">
+          <div class="mesh-soft"></div>
+          <div style="position:relative;">
+            <div class="mono" style="color:var(--mist-60); margin-bottom:16px;">Google · Pixel</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+              <span class="ghost-chip">Call Screen</span>
+              <span class="ghost-chip">Hold For Me</span>
+              <span class="ghost-chip">Live Caption</span>
+            </div>
+            <div class="body" style="font-size:14px; color:var(--mist-50);">Strong at filtering. Silent on what to do after the call.</div>
+          </div>
+        </div>
+
+        <div class="card anim-up d2" style="padding:24px 26px; position:relative; overflow:hidden;">
+          <div class="mesh-soft"></div>
+          <div style="position:relative;">
+            <div class="mono" style="color:var(--mist-60); margin-bottom:16px;">Apple · iOS</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+              <span class="ghost-chip">Live Voicemail</span>
+              <span class="ghost-chip">Transcribe</span>
+              <span class="ghost-chip">Focus Modes</span>
+            </div>
+            <div class="body" style="font-size:14px; color:var(--mist-50);">Polished surfaces. AI hides itself, sometimes too well.</div>
+          </div>
+        </div>
+
+        <div class="card anim-up d3" style="padding:24px 26px; position:relative; overflow:hidden;">
+          <div class="mesh-soft"></div>
+          <div style="position:relative;">
+            <div class="mono" style="color:var(--mist-60); margin-bottom:16px;">Samsung · One UI</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+              <span class="ghost-chip">Live Translate</span>
+              <span class="ghost-chip">Bixby Text Call</span>
+              <span class="ghost-chip">Summary</span>
+            </div>
+            <div class="body" style="font-size:14px; color:var(--mist-50);">Capabilities deep, discovery shallow. Most users never find them.</div>
+          </div>
+        </div>
+
+        <div class="card anim-up d3" style="padding:24px 26px; position:relative; overflow:hidden;">
+          <div class="mesh-soft"></div>
+          <div style="position:relative;">
+            <div class="mono" style="color:var(--mist-60); margin-bottom:16px;">Truecaller</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px;">
+              <span class="ghost-chip">Spam ID</span>
+              <span class="ghost-chip">Reverse Lookup</span>
+              <span class="ghost-chip">Block</span>
+            </div>
+            <div class="body" style="font-size:14px; color:var(--mist-50);">Defends against strangers. Does nothing for the people you love.</div>
+          </div>
+        </div>
+
+        <!-- The Gap - spans full width -->
+        <div class="anim-up d4" style="grid-column: 1 / -1; position:relative; overflow:hidden;
+            background: linear-gradient(135deg, rgba(255,72,0,0.08), rgba(255,72,0,0.02));
+            border: 1px solid rgba(255,72,0,0.35);
+            border-radius: 16px;
+            padding: 28px 32px;
+            display:flex; align-items:center; gap:28px;">
+          <div style="position:relative;">
+            <div class="mono" style="color:var(--fire); margin-bottom:12px;">The Gap</div>
+            <div class="h-section" style="font-size:30px; margin:0; color:var(--mist);">
+              Where genuine human value is still unmet.
+            </div>
+            <div class="body" style="font-size:15px; margin-top:10px; color:var(--mist-60);">
+              Context before. Hands during. Handoff after. The seams between people, not the model.
+            </div>
+          </div>
+          <div style="margin-left:auto; display:flex; gap:8px;">
+            <div class="fire-pulse" style="width:10px; height:10px; border-radius:50%; background:var(--fire);"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">03 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 04 - APPROACH
+     ======================================================== -->
+<section data-label="04 Approach">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:48px;">
+      <div class="section-label">04 / How I Approached This</div>
+      <div class="hairline" style="flex:1; max-width:520px; margin-top:14px;"></div>
+    </div>
+
+    <h2 class="h-section anim-up d1" style="font-size:64px; margin:0 0 36px 0; max-width:1380px;">
+      Three questions, asked in order.
+    </h2>
+    <p class="body anim-up d2" style="font-size:22px; max-width:1100px; margin:0 0 64px 0;">
+      Useful AI in a phone app is not a list of features, it's a sequence of decisions about who, where,
+      and why.<br/>I let the questions choose the screens, not the other way around.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;">
+
+      <div class="card anim-up d3" style="padding:40px 36px; min-height:400px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="num-fire" style="margin-bottom:32px;">01</div>
+          <div class="mono" style="color:var(--fire); margin-bottom:18px;">Who & What They Feel</div>
+          <h3 class="h-section" style="font-size:30px; margin:0 0 18px 0;">Who are the real users, and what do they actually feel?</h3>
+        </div>
+        <p class="body" style="font-size:18px; margin:24px 0 0 0;">
+          Not personas. Specific moments, the second after the dial tone ends, the second the call drops.
+        </p>
+      </div>
+
+      <div class="card anim-up d4" style="padding:40px 36px; min-height:400px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="num-fire" style="margin-bottom:32px;">02</div>
+          <div class="mono" style="color:var(--fire); margin-bottom:18px;">Where It Breaks</div>
+          <h3 class="h-section" style="font-size:30px; margin:0 0 18px 0;">Where does the experience genuinely break down today?</h3>
+        </div>
+        <p class="body" style="font-size:18px; margin:24px 0 0 0;">
+          AI is the answer when the human friction is already legible. I went looking for the friction first.
+        </p>
+      </div>
+
+      <div class="card anim-up d5" style="padding:40px 36px; min-height:400px; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div class="num-fire" style="margin-bottom:32px;">03</div>
+          <div class="mono" style="color:var(--fire); margin-bottom:18px;">Trust, Not Capability</div>
+          <h3 class="h-section" style="font-size:30px; margin:0 0 18px 0;">What would make AI feel trustworthy here, not just functional?</h3>
+        </div>
+        <p class="body" style="font-size:18px; margin:24px 0 0 0;">
+          Capability is table stakes. The design problem is the second thing, and it's almost never the model.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">04 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 05 - THE USERS
+     ======================================================== -->
+<section data-label="05 Three Scenarios">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">05 / Three Illustrative Scenarios</div>
+      <div class="hairline" style="flex:1; max-width:520px; margin-top:14px;"></div>
+    </div>
+
+    <h2 class="h-section anim-up d1" style="font-size:60px; margin:0 0 28px 0; max-width:1480px;">
+      The phone fails people<br/>at three specific seams.
+    </h2>
+    <p class="body anim-up d2" style="font-size:22px; margin:0 0 56px 0;">
+      I framed the problem around three ordinary call moments: before pickup, mid-call, and after hang-up and looked at where the default phone experience tends to break down.
+    </p>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:28px;">
+
+      <!-- SCENARIO CARD 1 -->
+      <div class="card anim-up d3" style="padding:28px 28px 32px 28px; min-height:580px; display:flex; flex-direction:column; position:relative; overflow:hidden;">
+        <div class="mesh-soft"></div>
+        <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.16;mix-blend-mode:overlay">
+          <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+        </svg>
+        <div style="position:relative; flex:1; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px;">
+            <div class="mono" style="color:var(--fire);">Before</div>
+            <div class="mono" style="color:var(--mist-40);">01</div>
+          </div>
+
+          <!-- Phone mockup: blank contact screen -->
+          <div style="display:flex; justify-content:center; margin:8px 0 20px 0;">
+            <div class="phone" style="width:200px; height:340px;">
+              <div class="phone-statusbar"><span>9:41</span><span>●●●●</span></div>
+              <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 24px);">
+                <div style="text-align:center; margin-top:18px;">
+                  <div style="width:56px; height:56px; border-radius:50%; background:#1B1918; border:1px solid #373633; margin:0 auto 12px auto;"></div>
+                  <div style="font-family:'GT Planar'; color:var(--mist); font-size:13px; font-weight:500;">Daniel Cohen</div>
+                  <div style="font-family:'Departure Mono'; color:var(--mist-40); font-size:9px; letter-spacing:0.06em; margin-top:4px;">+972 · MOBILE</div>
+                </div>
+                <div style="margin-top:20px; height:8px; background:rgba(241,240,224,0.04); border-radius:4px;"></div>
+                <div style="margin-top:8px; height:8px; background:rgba(241,240,224,0.04); border-radius:4px; width:60%;"></div>
+                <div style="margin-top:24px; padding:8px; border:1px dashed rgba(241,240,224,0.10); border-radius:6px; text-align:center; color:var(--mist-30); font-family:'Departure Mono'; font-size:9px; letter-spacing:0.05em;">
+                  NO CONTEXT
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:auto;">
+            <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">Going in cold.</h3>
+            <p class="body" style="font-size:18px; margin:0; color:var(--mist-70); line-height:1.5;">
+              In this scenario, the caller places the call with almost nothing on the contact surface, no thread, no reminder of the last conversation before someone answers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENARIO CARD 2 -->
+      <div class="card anim-up d4" style="padding:28px 28px 32px 28px; min-height:580px; display:flex; flex-direction:column; position:relative; overflow:hidden;">
+        <div class="mesh-soft"></div>
+        <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.16;mix-blend-mode:overlay">
+          <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+        </svg>
+        <div style="position:relative; flex:1; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px;">
+            <div class="mono" style="color:var(--fire);">During</div>
+            <div class="mono" style="color:var(--mist-40);">02</div>
+          </div>
+
+          <!-- Phone mockup: in-call screen -->
+          <div style="display:flex; justify-content:center; margin:8px 0 20px 0;">
+            <div class="phone" style="width:200px; height:340px;">
+              <div class="phone-statusbar"><span>9:42</span><span>●●●●</span></div>
+              <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 24px); display:flex; flex-direction:column; align-items:center; justify-content:space-between;">
+                <div style="margin-top:14px; text-align:center;">
+                  <div style="width:60px; height:60px; border-radius:50%; background:#1B1918; border:1px solid #373633; margin:0 auto 10px auto;"></div>
+                  <div style="font-family:'GT Planar'; color:var(--mist); font-size:13px; font-weight:500;">Office</div>
+                  <div style="font-family:'Departure Mono'; color:var(--fire); font-size:9px; letter-spacing:0.06em; margin-top:6px;">04:23</div>
+                </div>
+                <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:10px; width:100%; margin-bottom:8px;">
+                  <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid rgba(241,240,224,0.10);"></div>
+                  <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid rgba(241,240,224,0.10);"></div>
+                  <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid rgba(241,240,224,0.10);"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:auto;">
+            <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">Present, or informed.</h3>
+            <p class="body" style="font-size:15px; margin:0; color:var(--mist-70); line-height:1.5;">
+              Mid-call, a scheduling question pulls attention toward the calendar while the conversation is still live; juggling both tends to weaken both.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENARIO CARD 3 -->
+      <div class="card anim-up d5" style="padding:28px 28px 32px 28px; min-height:580px; display:flex; flex-direction:column; position:relative; overflow:hidden;">
+        <div class="mesh-soft"></div>
+        <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.16;mix-blend-mode:overlay">
+          <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+        </svg>
+        <div style="position:relative; flex:1; display:flex; flex-direction:column;">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px;">
+            <div class="mono" style="color:var(--fire);">After</div>
+            <div class="mono" style="color:var(--mist-40);">03</div>
+          </div>
+
+          <!-- Phone mockup: recents list, nothing caught -->
+          <div style="display:flex; justify-content:center; margin:8px 0 20px 0;">
+            <div class="phone" style="width:200px; height:340px;">
+              <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+              <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 24px);">
+                <div style="font-family:'Departure Mono'; font-size:9px; color:var(--mist-40); letter-spacing:0.06em; margin-bottom:10px;">RECENTS</div>
+                <div style="display:flex; flex-direction:column; gap:10px;">
+                  <div style="display:flex; align-items:center; gap:8px;"><div style="width:24px; height:24px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:6px; width:70%; background:rgba(241,240,224,0.10); border-radius:3px;"></div><div style="height:5px; width:40%; background:rgba(241,240,224,0.05); border-radius:3px; margin-top:5px;"></div></div></div>
+                  <div style="display:flex; align-items:center; gap:8px;"><div style="width:24px; height:24px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:6px; width:60%; background:rgba(241,240,224,0.10); border-radius:3px;"></div><div style="height:5px; width:35%; background:rgba(241,240,224,0.05); border-radius:3px; margin-top:5px;"></div></div></div>
+                  <div style="display:flex; align-items:center; gap:8px;"><div style="width:24px; height:24px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:6px; width:80%; background:rgba(241,240,224,0.10); border-radius:3px;"></div><div style="height:5px; width:45%; background:rgba(241,240,224,0.05); border-radius:3px; margin-top:5px;"></div></div></div>
+                </div>
+                <div style="margin-top:18px; padding:8px; border:1px dashed rgba(241,240,224,0.10); border-radius:6px; text-align:center; color:var(--mist-30); font-family:'Departure Mono'; font-size:9px; letter-spacing:0.05em;">
+                  NOTHING CAUGHT
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:auto;">
+            <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">The invisible handoff.</h3>
+            <p class="body" style="font-size:15px; margin:0; color:var(--mist-70); line-height:1.5;">
+              Commitments made on the call rarely survive hang-up: specifics fade before they land anywhere the recents list would reflect.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">05 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 06 - THE INSIGHT
+     ======================================================== -->
+<section data-label="06 The Insight">
+  <div class="mesh-fire-nebula"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.22;mix-blend-mode:overlay">
+    <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+  </svg>
+
+  <!-- Background: two overlapping circles, very faint -->
+  <svg width="100%" height="100%" viewBox="0 0 1920 1080" style="position:absolute;inset:0;" aria-hidden="true">
+    <circle cx="780" cy="540" r="320" fill="none" stroke="#2c2b29" stroke-width="1.5" opacity="0.6"/>
+    <circle cx="1140" cy="540" r="320" fill="none" stroke="#2c2b29" stroke-width="1.5" opacity="0.6"/>
+  </svg>
+
+  <div class="corner-tl mono">06 / The Insight</div>
+
+  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 140px;">
+    <div class="anim-up d1" style="max-width:1640px;">
+      <div class="h-display" style="font-size:56px; line-height:1.1; color:var(--mist);">
+        The real design challenge isn't building AI that can do <em style="font-style:italic; color:var(--mist-60);">more</em>
+      </div>
+    </div>
+
+    <div class="anim-up d3" style="max-width:1640px; margin-top:40px;">
+      <div class="h-display" style="font-size:56px; line-height:1.1; color:var(--fire);">
+        It's building AI that people actually trust enough to <em style="font-style:italic; color:#fff;">let in</em>
+      </div>
+    </div>
+
+    <div class="anim-up d5" style="max-width:820px; margin-top:56px;">
+      <p class="body" style="font-size:20px; color:var(--mist-70); line-height:1.5;">
+        Capability gets people interested. Trust is what makes them stay.
+        Every decision here was about building something people feel in control using, with clear moments to review, approve, and decide.
+      </p>
+    </div>
+  </div>
+
+  <div class="corner-bl mono">06 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 07 - DESIGN PRINCIPLES
+     ======================================================== -->
+<section data-label="07 Principles">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">07 / Design Principles</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <h2 class="h-section anim-up d1" style="font-size:64px; margin:0 0 28px 0;">
+      Three rules I refused<br/>to break.
+    </h2>
+    <p class="body anim-up d2" style="font-size:22px; max-width:1100px; margin:0 0 72px 0;">
+      Every screen in this case study can be checked against these. If it fails, it doesn't ship.
+    </p>
+
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:48px;">
+
+      <!-- Principle 1 -->
+      <div class="anim-up d3" style="padding:16px; border:1px solid var(--mist-15); border-radius:16px;">
+        <div class="num-fire" style="margin-bottom:32px;">01</div>
+        <!-- Handshake.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:28px;" aria-hidden="true">
+          <path d="M11 17L13 19C13.197 19.197 13.4308 19.3532 13.6882 19.4598C13.9456 19.5665 14.2214 19.6213 14.5 19.6213C14.7786 19.6213 15.0544 19.5665 15.3118 19.4598C15.5692 19.3532 15.803 19.197 16 19C16.197 18.803 16.3532 18.5692 16.4598 18.3118C16.5665 18.0544 16.6213 17.7786 16.6213 17.5C16.6213 17.2214 16.5665 16.9456 16.4598 16.6882C16.3532 16.4308 16.197 16.197 16 16M14.0002 14L16.5002 16.5C16.8981 16.8978 17.4376 17.1213 18.0002 17.1213C18.5628 17.1213 19.1024 16.8978 19.5002 16.5C19.8981 16.1022 20.1215 15.5626 20.1215 15C20.1215 14.4374 19.8981 13.8978 19.5002 13.5L15.6202 9.62002C15.0577 9.05821 14.2952 8.74265 13.5002 8.74265C12.7052 8.74265 11.9427 9.05821 11.3802 9.62002L10.5002 10.5C10.1024 10.8978 9.56284 11.1213 9.00023 11.1213C8.43762 11.1213 7.89805 10.8978 7.50023 10.5C7.1024 10.1022 6.87891 9.56262 6.87891 9.00002C6.87891 8.43741 7.1024 7.89784 7.50023 7.50002L10.3102 4.69002C11.2225 3.78016 12.4121 3.20057 13.6909 3.04299C14.9696 2.88541 16.2644 3.15885 17.3702 3.82002L17.8402 4.10002C18.266 4.357 18.7723 4.44613 19.2602 4.35002L21.0002 4.00002M21 3L22 14H20M3 3L2 14L8.5 20.5C8.89782 20.8978 9.43739 21.1213 10 21.1213C10.5626 21.1213 11.1022 20.8978 11.5 20.5C11.8978 20.1022 12.1213 19.5626 12.1213 19C12.1213 18.4374 11.8978 17.8978 11.5 17.5M3 4H11"/>
+        </svg>
+        <h3 class="h-section" style="font-size:32px; margin:0 0 18px 0;">Earn it<br/>before you do it.</h3>
+        <p class="body" style="font-size:17px; margin:0;">
+          The AI never acts without consent. It offers, asks, waits. Action is always one explicit tap away from intent, never a default.
+        </p>
+      </div>
+
+      <!-- Principle 2 -->
+      <div class="anim-up d4" style="padding:16px; border:1px solid var(--mist-15); border-radius:10px;">
+        <div class="num-fire" style="margin-bottom:32px;">02</div>
+        <!-- MessagesSquare.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:28px;" aria-hidden="true">
+          <path d="M18 9H20C20.5304 9 21.0391 9.21071 21.4142 9.58579C21.7893 9.96086 22 10.4696 22 11V22L18 18H12C11.4696 18 10.9609 17.7893 10.5858 17.4142C10.2107 17.0391 10 16.5304 10 16V15M14 9C14 9.53043 13.7893 10.0391 13.4142 10.4142C13.0391 10.7893 12.5304 11 12 11H6L2 15V4C2 2.9 2.9 2 4 2H12C12.5304 2 13.0391 2.21071 13.4142 2.58579C13.7893 2.96086 14 3.46957 14 4V9Z"/>
+        </svg>
+        <h3 class="h-section" style="font-size:32px; margin:0 0 18px 0;">Show your<br/>work.</h3>
+        <p class="body" style="font-size:17px; margin:0; max-width:460px;">
+          Whatever the AI understood is always visible and editable. Never a black box.
+          The interpretation is the interface.
+        </p>
+      </div>
+
+      <!-- Principle 3 -->
+      <div class="anim-up d5" style="padding:16px; border:1px solid var(--mist-15); border-radius:10px;">
+        <div class="num-fire" style="margin-bottom:32px;">03</div>
+        <!-- ScanEye.svg -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:28px;" aria-hidden="true">
+          <path d="M3 7V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H7M17 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V7M21 17V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H17M7 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V17M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12ZM5 12C5 12 7.5 7 12 7C16.5 7 19 12 19 12C19 12 16.5 17 12 17C7.5 17 5 12 5 12Z"/>
+        </svg>
+        <h3 class="h-section" style="font-size:32px; margin:0 0 18px 0;">Plain language<br/>for everyone.</h3>
+        <p class="body" style="font-size:17px; margin:0; max-width:460px;">
+          If a 67-year-old and a 19-year-old can't both understand the same sentence, the design isn't done.
+          Plain words are the universal access pattern.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">07 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 08 - DESIGN LANGUAGE DECISION
+     ======================================================== -->
+<section data-label="08 Design Decision">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">08 / A Design Decision</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1.3fr; gap:96px; align-items:start;">
+
+      <!-- LEFT: principle -->
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:64px; margin:0 0 36px 0;">
+          Native structure.<br/>AUI skin.
+        </h2>
+        <p class="body anim-up d2" style="font-size:19px; max-width:480px; margin:0 0 22px 0;">
+          A phone app lives inside an operating system. It shares the screen with the dialer, the
+          contacts, the notification center. Look completely foreign to that environment and you create
+          friction before a single tap.
+        </p>
+        <p class="body anim-up d3" style="font-size:19px; max-width:480px; margin:0 0 36px 0;">
+          But this is also a product with an identity, recognizable wherever it appears. Native
+          interactions, AUI visuals. <span class="body-strong" style="color:var(--mist);">Every AI moment is a brand moment.</span>
+        </p>
+
+        <!-- Comparison rows -->
+        <div class="anim-up d4" style="border-top:1px solid var(--stroke-dark); border-bottom:1px solid var(--stroke-dark); margin-top:8px;">
+          <div style="display:grid; grid-template-columns: 2fr auto 2fr; padding:18px 0; border-bottom:1px solid var(--mist-10); align-items:center;">
+            <div class="mono" style="font-size:13px; color:var(--mist-50);">Interaction Patterns</div>
+            <div class="mono" style="font-size:13px; color:var(--stroke-light); padding:0 16px;">→</div>
+            <div class="mono" style="font-size:13px; color:var(--fire);">Visual Identity</div>
+          </div>
+          <div style="display:grid; grid-template-columns: 2fr auto 2fr; padding:18px 0; border-bottom:1px solid var(--mist-10); align-items:center;">
+            <div class="mono" style="font-size:13px; color:var(--mist-50);">Bottom Sheets, Gestures</div>
+            <div class="mono" style="font-size:13px; color:var(--stroke-light); padding:0 16px;">→</div>
+            <div class="mono" style="font-size:13px; color:var(--fire);">Fire / Nebula / Dark</div>
+          </div>
+          <div style="display:grid; grid-template-columns: 2fr auto 2fr; padding:18px 0; border-bottom:1px solid var(--mist-10); align-items:center;">
+            <div class="mono" style="font-size:13px; color:var(--mist-50);">Tap Targets, Navigation</div>
+            <div class="mono" style="font-size:13px; color:var(--stroke-light); padding:0 16px;">→</div>
+            <div class="mono" style="font-size:13px; color:var(--fire);">Nebula = AI Signature</div>
+          </div>
+          <div style="display:grid; grid-template-columns: 2fr auto 2fr; padding:18px 0; align-items:center;">
+            <div class="mono" style="font-size:13px; color:var(--mist-50);">OS-Familiar Structure</div>
+            <div class="mono" style="font-size:13px; color:var(--stroke-light); padding:0 16px;">→</div>
+            <div class="mono" style="font-size:13px; color:var(--fire);">Brand Speaks Where It Matters</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: thumbnails -->
+      <div class="anim-up d3" style="display:grid; grid-template-columns: 1fr auto 1fr; gap:36px; align-items:center;">
+
+        <!-- Thumbnail 1 - Native -->
+        <div style="text-align:center;">
+          <div style="background:#F5F5F7; border:2px solid #d0d0d2; border-radius:36px; padding:14px 12px 16px 12px; width:100%; aspect-ratio: 9/19; max-width:280px; margin:0 auto; position:relative;">
+            <div style="position:absolute; top:-14px; right:-14px; width:28px; height:28px; border-radius:50%; border:1.5px solid #d05050; background:var(--space); display:flex; align-items:center; justify-content:center; color:#d05050; font-size:14px; font-family:'GT Planar'; z-index:5;">×</div>
+            <div style="display:flex; justify-content:space-between; font-family:-apple-system, sans-serif; font-size:11px; color:#1c1c1e; padding:2px 12px 10px 12px;"><span>9:48</span><span>●●●●</span></div>
+            <div style="background:#fff; border-radius:24px; padding:18px 14px; height:calc(100% - 32px); border:1px solid #e5e5e7;">
+              <div style="font-family:-apple-system, sans-serif; font-size:13px; color:#1c1c1e; font-weight:600; margin-bottom:14px;">Want help with this call?</div>
+              <div style="font-family:-apple-system, sans-serif; font-size:11px; color:#6e6e73; line-height:1.4; margin-bottom:18px;">I can summarize and add follow-ups to your apps.</div>
+              <div style="display:flex; gap:8px; margin-top:auto;">
+                <div style="flex:1; padding:8px; background:#007AFF; color:white; font-family:-apple-system; font-size:11px; text-align:center; border-radius:8px; font-weight:600;">Yes</div>
+                <div style="flex:1; padding:8px; background:#f2f2f7; color:#1c1c1e; font-family:-apple-system; font-size:11px; text-align:center; border-radius:8px;">Not now</div>
+              </div>
+            </div>
+          </div>
+          <div class="mono" style="margin-top:20px; color:var(--mist-40); font-size:11px;">Familiar. Anonymous. Forgettable.</div>
+        </div>
+
+        <!-- Annotation -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:10px;">
+          <div style="width:1px; height:60px; background:var(--stroke-dark);"></div>
+          <div class="mono" style="color:var(--mist-50); font-size:10px; text-align:center; white-space:nowrap;">Same Pattern →</div>
+          <div style="width:1px; height:60px; background:var(--stroke-dark);"></div>
+        </div>
+
+        <!-- Thumbnail 2 - AUI -->
+        <div style="text-align:center;">
+          <div class="phone" style="width:100%; aspect-ratio: 9/19; max-width:280px; margin:0 auto; position:relative;">
+            <div style="position:absolute; top:-14px; right:-14px; width:28px; height:28px; border-radius:50%; border:1.5px solid #5fa86a; background:var(--space); display:flex; align-items:center; justify-content:center; color:#5fa86a; font-size:13px; z-index:5;">✓</div>
+            <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:16px 14px; height:calc(100% - 32px); display:flex; flex-direction:column;">
+              <div style="background:var(--fire-05); border-radius:8px; padding:14px;">
+                <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px;">
+                  <span class="ai-tag" style="font-size:9px; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <span class="mono" style="font-size:9px; color:var(--mist-40);">Post-Call</span>
+                </div>
+                <div class="body-strong" style="font-size:13px; margin-bottom:8px; color:var(--mist);">Want my help with this call?</div>
+                <div class="body" style="font-size:11px; color:var(--mist-60); line-height:1.45; margin-bottom:14px;">I can capture follow-ups and put them where they belong.</div>
+                <div style="display:flex; gap:6px;">
+                  <div style="flex:1; padding:8px; background:var(--fire); color:var(--mist); font-family:'GT Planar'; font-size:11px; text-align:center; border-radius:8px; font-weight:500;">Yes</div>
+                  <div style="flex:1; padding:8px; background:transparent; color:var(--mist); border:1px solid var(--mist-15); font-family:'GT Planar'; font-size:11px; text-align:center; border-radius:8px;">Not now</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mono" style="margin-top:20px; color:var(--nebula); font-size:11px;">Familiar structure. Unmistakable identity.</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="corner-bl mono">08 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 09 - CONCEPT 1: BEFORE THE CALL
+     ======================================================== -->
+<section data-label="09 Concept 01">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">09 / Concept 01 - Before the Call</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:80px; align-items:center;">
+
+      <!-- LEFT: copy -->
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:60px; margin:0 0 28px 0;">
+          A warm strip of context,<br/>right where you'd look.
+        </h2>
+
+        <div class="anim-up d2" style="margin-bottom:28px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Problem</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            You're about to dial someone you haven't spoken to in months.
+            What was the last thing? Who said what? The phone is silent on the only thing you actually need.
+          </p>
+        </div>
+
+        <div class="anim-up d3" style="margin-bottom:28px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Solution</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            On the contact card, a single line surfaces, drawn from prior calls and shared apps with explicit permission. Two sentences, never more.
+          </p>
+        </div>
+
+        <div class="anim-up d4">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Trust Mechanic</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            A small "How does this know?" link opens the source, every line is traceable to a moment you opted into.
+          </p>
+        </div>
+      </div>
+
+      <!-- RIGHT: phones, two states -->
+      <div class="anim-up d3" style="display:grid; grid-template-columns: 1fr 1fr; gap:40px; align-items:start; position:relative;">
+
+        <!-- State 1 -->
+        <div style="text-align:center;">
+          <div class="mono" style="color:var(--mist-40); margin-bottom:14px; font-size:11px;">State 01 · Standard</div>
+          <div class="phone" style="width:100%; max-width:240px; aspect-ratio: 9/19; margin:0 auto;">
+            <div class="phone-statusbar"><span>9:41</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:18px 14px;">
+              <div style="text-align:center; margin-top:14px;">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1B1918; border:1px solid #373633; margin:0 auto 14px auto;"></div>
+                <div class="body-strong" style="font-size:14px;">Daniel Cohen</div>
+                <div class="mono" style="font-size:10px; color:var(--mist-40); margin-top:4px;">+972 · MOBILE</div>
+              </div>
+              <div style="margin-top:24px; display:flex; gap:8px; justify-content:center;">
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15);"></div>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(255, 72, 0, 0.06);"></div>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15);"></div>
+              </div>
+              <div style="margin-top:30px; padding:10px; border:1px dashed rgba(241,240,224,0.10); border-radius:6px; text-align:center; font-family:'Departure Mono'; font-size:9px; color:var(--mist-30); letter-spacing:0.06em;">EMPTY</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- State 2 -->
+        <div style="text-align:center;">
+          <div class="mono" style="color:var(--fire); margin-bottom:14px; font-size:11px;">State 02 · With Context</div>
+          <div class="phone" style="width:100%; max-width:240px; aspect-ratio: 9/19; margin:0 auto; position:relative;">
+            <div class="phone-statusbar"><span>9:41</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:18px 14px;">
+              <div style="text-align:center; margin-top:14px;">
+                <div style="width:64px; height:64px; border-radius:50%; background:#1B1918; border:1px solid #373633; margin:0 auto 14px auto;"></div>
+                <div class="body-strong" style="font-size:14px;">Daniel Cohen</div>
+                <div class="mono" style="font-size:10px; color:var(--mist-40); margin-top:4px;">+972 · MOBILE</div>
+              </div>
+              <!-- Context strip -->
+              <div style="margin-top:18px; background:var(--nebula-06); border-radius:8px; padding:10px 12px;">
+                <div style="display:flex; gap:6px; align-items:center; margin-bottom:6px;">
+                  <span class="ai-tag" style="font-size:9px; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <span class="mono" style="font-size:8px; color:var(--mist-40);">CONTEXT</span>
+                </div>
+                <div class="body" style="font-size:11px; color:var(--mist-70); line-height:1.45;">
+                  You haven't spoken since March. Last time you talked about the apartment renovation.
+                </div>
+                <div class="mono" style="font-size:8px; color:var(--mist-40); margin-top:8px;">How does this know? →</div>
+              </div>
+              <div style="margin-top:14px; display:flex; gap:8px; justify-content:center;">
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15);"></div>
+                <div style="width:36px; height:36px; border-radius:50%; background:var(--fire);"></div>
+                <div style="width:36px; height:36px; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15);"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">09 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 10 - CONCEPT 2: DURING THE CALL
+     ======================================================== -->
+<section data-label="10 Concept 02">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">10 / Concept 02 - During the Call</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.1fr 1fr; gap:96px; align-items:center;">
+
+      <!-- LEFT: phone -->
+      <div class="anim-up d3" style="display:flex; justify-content:center; position:relative;">
+        <div class="phone" style="width:340px; aspect-ratio: 9/19; position:relative;">
+          <div class="phone-statusbar"><span>9:42</span><span>●●●●</span></div>
+          <div class="phone-screen" style="padding:24px 18px; height:calc(100% - 32px); display:flex; flex-direction:column; align-items:center; justify-content:space-between; position:relative;">
+            <div style="text-align:center; margin-top:32px;">
+              <div style="width:88px; height:88px; border-radius:50%; background:#1B1918; border:1px solid #373633; margin:0 auto 18px auto;"></div>
+              <div class="body-strong" style="font-size:18px; color:var(--mist);">Office</div>
+              <div class="mono" style="color:var(--fire); font-size:12px; margin-top:8px;">04:23</div>
+            </div>
+
+            <!-- Floating answer overlay -->
+            <div style="background:var(--eerie); border:1px solid var(--mist-15); border-radius:12px; padding:14px 16px; box-shadow:0 16px 36px rgba(0,0,0,0.6); width:100%; backdrop-filter: blur(8px);">
+              <div style="display:flex; gap:8px; align-items:center; margin-bottom:8px;">
+                <span class="ai-tag" style="font-size:9px; color:var(--fire); background:var(--fire-10);">AI</span>
+                <span class="mono" style="font-size:9px; color:var(--mist-40);">Calendar</span>
+              </div>
+              <div class="body-strong" style="font-size:14px; margin-bottom:4px;">Thursday is clear.</div>
+              <div class="body" style="font-size:12px; color:var(--mist-60);">No conflicts · 9:00 – 18:00</div>
+            </div>
+
+            <!-- Controls + assistant button -->
+            <div style="display:flex; flex-direction:column; align-items:center; width:100%; gap:14px;">
+              <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; width:100%;">
+                <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Departure Mono'; font-size:9px; color:var(--mist-50); letter-spacing:0.06em;">MUTE</span></div>
+                <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Departure Mono'; font-size:9px; color:var(--mist-50); letter-spacing:0.06em;">HOLD</span></div>
+                <div style="aspect-ratio:1; border-radius:50%; background:rgba(241,240,224,0.05); border:1px solid var(--mist-15); display:flex; align-items:center; justify-content:center;"><span style="font-family:'Departure Mono'; font-size:9px; color:var(--mist-50); letter-spacing:0.06em;">SPKR</span></div>
+              </div>
+              <!-- Assistant button -->
+              <div class="ai-pulse" style="display:flex; align-items:center; gap:8px; padding:10px 18px; background:var(--fire-10); border:1px solid rgba(255,72,0,0.35); border-radius:24px;">
+                <div style="width:6px; height:6px; border-radius:50%; background:var(--fire);"></div>
+                <span style="font-family:'Departure Mono'; font-size:11px; color:var(--fire); letter-spacing:0.1em; text-transform:uppercase;">Press · Hold to Ask</span>
+              </div>
+              <!-- End call -->
+              <div style="width:56px; height:56px; border-radius:50%; background:#d23b1a;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: copy -->
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:60px; margin:0 0 28px 0;">
+          A silent second pair of hands.
+        </h2>
+
+        <div class="anim-up d2" style="margin-bottom:24px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Problem</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            "Choose between being present and getting information."
+            Switching apps mid-call is a small disaster: lost context, lost rapport, lost answer.
+          </p>
+        </div>
+
+        <div class="anim-up d3" style="margin-bottom:24px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Solution</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            One assistant button at the bottom edge. Press-and-hold to ask a single question, calendar, contacts, last email.
+            The answer floats above the call as a small card. Release returns to the call.
+          </p>
+        </div>
+
+        <div class="anim-up d4">
+          <div class="mono" style="color:var(--fire); margin-bottom:10px;">The Trust Mechanic</div>
+          <p class="body" style="font-size:19px; max-width:646px; margin:0;">
+            Trust is designed into the gesture.
+            A press is a request. A release is an exit.
+            No background behavior, no hidden state - just a clear, controlled exchange.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">10 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 11 - CONCEPT 3 INTRO + FULL FLOW
+     ======================================================== -->
+<section data-label="11 Concept 03 Flow">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:28px;">
+      <div class="section-label">11 / Concept 03 - After the Call · Full Flow</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:64px; align-items:end; margin-bottom:48px;">
+      <h2 class="h-section anim-up d1" style="font-size:60px; margin:0;">
+        The proactive handoff,<br/>in four taps, no surprises.
+      </h2>
+      <p class="body anim-up d2" style="font-size:19px; max-width:540px; margin:0; color:var(--mist-70);">
+        A call just ended. Something was agreed. The AI noticed, and asks for permission.
+        Below: the full sequence, from the offer to the receipt.
+      </p>
+    </div>
+
+    <!-- Flow row -->
+    <div style="position:relative; padding:28px 24px 36px 24px; background:linear-gradient(180deg, rgba(255,72,0,0.03), rgba(255,72,0,0.02)); border:1px solid var(--mist-10); border-radius:20px; overflow:hidden;">
+      <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.18;mix-blend-mode:overlay">
+        <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+      </svg>
+
+      <div style="position:relative; display:grid; grid-template-columns: repeat(4, 1fr); gap:24px; align-items:start;">
+
+        <!-- STEP 1 -->
+        <div class="anim-up d3">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px;">
+            <div class="mono" style="color:var(--fire); font-size:13px;">01 The Ask</div>
+            <div class="mono" style="color:var(--mist-30); font-size:11px;">→</div>
+          </div>
+          <div class="phone" style="width:240px;height:500px;margin:0 auto;box-sizing:border-box;">
+            <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 32px); position:relative;">
+              <div class="mono" style="font-size:9px; color:var(--mist-40); margin-bottom:10px;">RECENTS</div>
+              <div style="display:flex; flex-direction:column; gap:9px; opacity:0.5;">
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:22px; height:22px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:5px; width:70%; background:rgba(241,240,224,0.10); border-radius:2px;"></div><div style="height:4px; width:40%; background:rgba(241,240,224,0.06); border-radius:2px; margin-top:4px;"></div></div></div>
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:22px; height:22px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:5px; width:60%; background:rgba(241,240,224,0.10); border-radius:2px;"></div><div style="height:4px; width:35%; background:rgba(241,240,224,0.06); border-radius:2px; margin-top:4px;"></div></div></div>
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:22px; height:22px; border-radius:50%; background:#1B1918; border:1px solid #373633;"></div><div style="flex:1;"><div style="height:5px; width:55%; background:rgba(241,240,224,0.10); border-radius:2px;"></div></div></div>
+              </div>
+              <!-- Floating consent card -->
+              <div style="position:absolute; left:8px; right:8px; bottom:10px; background:var(--eerie); border:1px solid var(--mist-15); border-radius:14px; padding:14px; box-shadow:0 14px 28px rgba(0,0,0,0.5);">
+                <div style="display:flex; gap:6px; margin-bottom:10px;"><span class="ai-tag" style="font-size:8px; color:var(--fire); background:var(--fire-10);">AI</span></div>
+                <div class="body-strong" style="font-size:12px; margin-bottom:12px;">Want my help with this call?</div>
+                <div style="display:flex; gap:6px;">
+                  <div style="flex:1; padding:7px; background:var(--fire); color:var(--mist); font-size:10px; text-align:center; border-radius:6px; font-family:'GT Planar'; font-weight:500;">Yes</div>
+                  <div style="flex:1; padding:7px; border:1px solid var(--mist-15); color:var(--mist); font-size:10px; text-align:center; border-radius:6px; font-family:'GT Planar';">Not now</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:14px; color:var(--fire); font-size:11px;">The AI offers. It doesn't assume.</div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="anim-up d4">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px;">
+            <div class="mono" style="color:var(--fire); font-size:13px;">02 Understand</div>
+            <div class="mono" style="color:var(--mist-30); font-size:11px;">→</div>
+          </div>
+          <div class="phone" style="width:240px;height:500px;margin:0 auto;box-sizing:border-box;">
+            <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:12px 10px; height:calc(100% - 32px); overflow:hidden;">
+              <div class="mono" style="font-size:8px; color:var(--mist-40); margin-bottom:10px;">HERE'S WHAT I UNDERSTOOD</div>
+
+              <div style="margin-bottom:10px;">
+                <div class="mono" style="font-size:8px; color:var(--mist-50); margin-bottom:4px;">YOU SAID YOU'D:</div>
+                <div style="background:rgba(255,72,0,0.06); border-radius:5px; padding:7px 8px; margin-bottom:4px; display:flex; align-items:flex-start; gap:6px;">
+                  <span class="ai-tag" style="font-size:7px; flex-shrink:0; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <div style="flex:1;"><div style="font-family:'GT Planar'; font-size:9px; color:var(--mist-80); line-height:1.35;">Send the budget by Thu</div></div>
+                  <div style="font-family:'Departure Mono'; font-size:8px; color:var(--mist-30);">✎ ×</div>
+                </div>
+                <div style="background:rgba(255,72,0,0.06); border-radius:5px; padding:7px 8px; display:flex; align-items:flex-start; gap:6px;">
+                  <span class="ai-tag" style="font-size:7px; flex-shrink:0; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <div style="flex:1;"><div style="font-family:'GT Planar'; font-size:9px; color:var(--mist-80); line-height:1.35;">Loop in Ran on the move</div></div>
+                  <div style="font-family:'Departure Mono'; font-size:8px; color:var(--mist-30);">✎ ×</div>
+                </div>
+              </div>
+
+              <div style="margin-bottom:10px;">
+                <div class="mono" style="font-size:8px; color:var(--mist-50); margin-bottom:4px;">THEY SAID THEY'D:</div>
+                <div style="background:rgba(255,72,0,0.06); border-radius:5px; padding:7px 8px; display:flex; align-items:flex-start; gap:6px;">
+                  <span class="ai-tag" style="font-size:7px; flex-shrink:0; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <div style="flex:1;"><div style="font-family:'GT Planar'; font-size:9px; color:var(--mist-80); line-height:1.35;">Confirm Thu vs Fri</div></div>
+                  <div style="font-family:'Departure Mono'; font-size:8px; color:var(--mist-30);">✎ ×</div>
+                </div>
+              </div>
+
+              <div style="margin-bottom:10px;">
+                <div class="mono" style="font-size:8px; color:var(--mist-50); margin-bottom:4px;">WORTH REMEMBERING:</div>
+                <div style="background:rgba(255,72,0,0.06); border-radius:5px; padding:7px 8px; display:flex; align-items:flex-start; gap:6px;">
+                  <span class="ai-tag" style="font-size:7px; flex-shrink:0; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <div style="flex:1;"><div style="font-family:'GT Planar'; font-size:9px; color:var(--mist-80); line-height:1.35;">Budget cap: 12,000</div></div>
+                  <div style="font-family:'Departure Mono'; font-size:8px; color:var(--mist-30);">✎ ×</div>
+                </div>
+              </div>
+
+              <div style="margin-top:auto; border:1px dashed var(--mist-15); border-radius:5px; padding:6px 8px; font-family:'GT Planar'; font-size:9px; color:var(--mist-30);">+ Anything missing? Add it here</div>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:14px; color:var(--fire); font-size:11px;">Everything editable. Nothing final.</div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="anim-up d5">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px;">
+            <div class="mono" style="color:var(--fire); font-size:13px;">03 Confirm</div>
+            <div class="mono" style="color:var(--mist-30); font-size:11px;">→</div>
+          </div>
+          <div class="phone" style="width:240px;height:500px;margin:0 auto;box-sizing:border-box;">
+            <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 32px); display:flex; flex-direction:column;">
+              <div class="mono" style="font-size:8px; color:var(--mist-40); margin-bottom:14px;">HERE'S WHAT I'LL DO</div>
+              <div style="margin-bottom:10px; padding:10px; background:rgba(241,240,224,0.03); border-radius:6px;">
+                <div class="body" style="font-size:10px; color:var(--mist-80); line-height:1.5;">
+                  I'll add <span style="color:var(--mist);">Thursday</span> to your calendar, drop a note with the <span style="color:var(--mist);">budget</span>, and draft a message to <span style="color:var(--mist);">Ran</span>.
+                </div>
+              </div>
+              <div style="display:flex; flex-direction:column; gap:5px; margin-bottom:14px;">
+                <div style="display:flex; align-items:center; gap:6px; font-family:'Departure Mono'; font-size:8px; color:var(--mist-50); letter-spacing:0.06em;">
+                  <span style="color:var(--fire);">●</span> CALENDAR · ADD THURSDAY
+                </div>
+                <div style="display:flex; align-items:center; gap:6px; font-family:'Departure Mono'; font-size:8px; color:var(--mist-50); letter-spacing:0.06em;">
+                  <span style="color:var(--fire);">●</span> NOTES · BUDGET 12K
+                </div>
+                <div style="display:flex; align-items:center; gap:6px; font-family:'Departure Mono'; font-size:8px; color:var(--mist-50); letter-spacing:0.06em;">
+                  <span style="color:var(--fire);">●</span> MESSAGES · DRAFT TO RAN
+                </div>
+              </div>
+              <div style="margin-top:auto;">
+                <div style="padding:11px; background:var(--fire); color:var(--mist); border-radius:8px; text-align:center; font-family:'GT Planar'; font-size:13px; font-weight:500;">Do it</div>
+                <div style="font-family:'GT Planar'; font-size:9px; color:var(--mist-50); text-align:center; margin-top:8px; line-height:1.4;">You can undo anything for the next 60 seconds.</div>
+              </div>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:14px; color:var(--fire); font-size:11px;">Nothing executes until this tap.</div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div class="anim-up d6">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:14px;">
+            <div class="mono" style="color:var(--fire); font-size:13px;">04 Done</div>
+            <div class="mono" style="color:var(--mist-30); font-size:11px;">●</div>
+          </div>
+          <div class="phone" style="width:240px;height:500px;margin:0 auto;box-sizing:border-box;">
+            <div class="phone-statusbar"><span>9:48</span><span>●●●●</span></div>
+            <div class="phone-screen" style="padding:14px 12px; height:calc(100% - 32px); display:flex; flex-direction:column;">
+              <div class="mono" style="font-size:8px; color:var(--mist-40); margin-bottom:16px;">DONE · 09:48</div>
+              <div style="display:flex; flex-direction:column; gap:9px; margin-bottom:auto;">
+                <div style="display:flex; align-items:flex-start; gap:8px; padding:8px 10px; background:rgba(255,72,0,0.05); border-radius:6px;">
+                  <div style="color:var(--fire); font-size:11px; flex-shrink:0;">✓</div>
+                  <div style="font-family:'GT Planar'; font-size:10px; color:var(--mist-80); line-height:1.4;">Thursday added to calendar</div>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; padding:8px 10px; background:rgba(255,72,0,0.05); border-radius:6px;">
+                  <div style="color:var(--fire); font-size:11px; flex-shrink:0;">✓</div>
+                  <div style="font-family:'GT Planar'; font-size:10px; color:var(--mist-80); line-height:1.4;">Budget note saved</div>
+                </div>
+                <div style="display:flex; align-items:flex-start; gap:8px; padding:8px 10px; background:rgba(255,72,0,0.06); border-radius:6px;">
+                  <span class="ai-tag" style="font-size:7px; flex-shrink:0; color:var(--fire); background:var(--fire-10);">AI</span>
+                  <div style="font-family:'GT Planar'; font-size:10px; color:var(--mist-80); line-height:1.4;">Draft ready for Ran, tap to review before it sends</div>
+                </div>
+              </div>
+              <div style="margin-top:14px; padding:9px; border:1px solid var(--mist-15); color:var(--mist-70); border-radius:8px; text-align:center; font-family:'GT Planar'; font-size:11px;">Undo</div>
+            </div>
+          </div>
+          <div class="callout" style="margin-top:14px; color:var(--fire); font-size:11px;">Accountable and reversible.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">11 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 12 - ALWAYS ALLOW
+     ======================================================== -->
+<section data-label="12 Always Allow">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">12 / Trust Graduation</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:96px; align-items:center;">
+
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:60px; margin:0 0 28px 0;">
+          Trust is earned,<br/>then optionally<br/>delegated.
+        </h2>
+        <p class="body anim-up d3" style="font-size:20px; max-width:658px; margin:0 0 24px 0;">
+          After a few successful interactions, the system offers to take on more - clearly, and on your terms. The choice is simple, visible, and easy to undo.
+        </p>
+        <div class="anim-up d4" style="margin-top:32px; padding:20px 24px; background:rgba(255,72,0,0.04); border-radius:8px; max-width:707px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:8px;">The Promise</div>
+          <p class="body" style="font-size:17px; margin:0; color:var(--mist-80);">
+            Asked once. Off by default. Reversible from one settings tap. Never silently expanded.
+          </p>
+        </div>
+      </div>
+
+      <div class="anim-up d3" style="display:flex; justify-content:center;">
+        <div class="phone" style="width:100%; max-width:340px; aspect-ratio: 9/19;">
+          <div class="phone-statusbar"><span>9:51</span><span>●●●●</span></div>
+          <div class="phone-screen" style="padding:24px 18px; height:calc(100% - 32px); display:flex; flex-direction:column;">
+            <div class="mono" style="font-size:10px; color:var(--mist-40); margin-bottom:24px;">SETTINGS · AUTOMATIC</div>
+
+            <div style="background:rgba(255,72,0,0.06); border-radius:10px; padding:18px;">
+              <div style="display:flex; gap:6px; margin-bottom:14px;"><span class="ai-tag" style="color:var(--fire); background:var(--fire-10);">AI</span></div>
+              <h3 class="h-section" style="font-size:22px; margin:0 0 12px 0; line-height:1.1;">Do this automatically after every call?</h3>
+              <p class="body" style="font-size:13px; color:var(--mist-60); margin:0 0 20px 0; line-height:1.45;">
+                You can turn it off any time.
+              </p>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <div style="padding:11px; background:var(--fire); color:var(--mist); border-radius:8px; text-align:center; font-family:'GT Planar'; font-size:13px; font-weight:500;">Yes, always</div>
+                <div style="padding:11px; border:1px solid var(--mist-15); color:var(--mist); border-radius:8px; text-align:center; font-family:'GT Planar'; font-size:13px;">Ask me each time</div>
+              </div>
+            </div>
+
+            <div style="margin-top:auto; padding-top:18px; font-family:'Departure Mono'; font-size:9px; color:var(--mist-30); text-align:center; letter-spacing:0.06em;">
+              ASKED ONCE · REVERSIBLE
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">12 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 13 - EDGE CASES
+     ======================================================== -->
+<section data-label="13 Edge Cases">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">13 / Edge Cases</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 2.4fr; gap:80px; align-items:start;">
+
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:56px; margin:0 0 24px 0;">
+          Good design<br/>names what<br/>can go wrong.
+        </h2>
+        <p class="body anim-up d2" style="font-size:19px; max-width:420px;">
+          Four moments where AI in a phone app most often fails users, and the design decision that addresses each.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:24px;">
+
+        <!-- EDGE 1 -->
+        <div class="card anim-up d3" style="padding:24px 24px; min-height:240px; background:rgba(255,72,0,0.06); border:1px solid var(--mist-10); border-radius:12px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:14px; font-size:11px;">01 · Privacy</div>
+          <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">"I don't want to be recorded."</h3>
+          <p class="body" style="font-size:18px; color:var(--mist-70); margin:0 0 14px 0;">
+            On-device processing. Nothing leaves the phone unless you tap "send." A single toggle in settings, visible, plain English, default off on first install.
+          </p>
+        </div>
+
+        <!-- EDGE 2 -->
+        <div class="card anim-up d3" style="padding:24px 24px; min-height:240px; background:rgba(255,72,0,0.06); border:1px solid var(--mist-10); border-radius:12px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:14px; font-size:11px;">02 · Wrong</div>
+          <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">"The AI got it wrong."</h3>
+          <p class="body" style="font-size:18px; color:var(--mist-70); margin:0 0 14px 0;">
+            Every item on the Understand screen is editable inline before any action runs. One tap to dismiss, one tap to fix. The error never compounds.
+          </p>
+        </div>
+
+        <!-- EDGE 3 -->
+        <div class="card anim-up d4" style="padding:24px 24px; min-height:240px; background:rgba(255,72,0,0.06); border:1px solid var(--mist-10); border-radius:12px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:14px; font-size:11px;">03 · Personal</div>
+          <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">"The call was personal."</h3>
+          <p class="body" style="font-size:18px; color:var(--mist-70); margin:0 0 14px 0;">
+            When there's nothing actionable, the AI says so, quietly. No fake tasks, no padded summaries. Empty is a valid output.
+          </p>
+        </div>
+
+        <!-- EDGE 4 -->
+        <div class="card anim-up d4" style="padding:24px 24px; min-height:240px; background:rgba(255,72,0,0.06); border:1px solid var(--mist-10); border-radius:12px;">
+          <div class="mono" style="color:var(--fire); margin-bottom:14px; font-size:11px;">04 · Attribution</div>
+          <h3 class="h-section" style="font-size:24px; margin:0 0 14px 0;">"Someone else was on the call."</h3>
+          <p class="body" style="font-size:18px; color:var(--mist-70); margin:0 0 14px 0;">
+            "You said" and "they said" are always two columns, never blended. If unclear who said what, the item is dropped, never guessed.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">13 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 14 - KPIs
+     ======================================================== -->
+<section data-label="14 KPIs">
+  <div class="slide-pad" style="padding-bottom:64px;">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:28px;">
+      <div class="section-label">14 / KPIs & Success Metrics</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <h2 class="h-section anim-up d1" style="font-size:56px; margin:0 0 16px 0;">
+      Metrics tied to behavior,<br/>not downloads or engagement time.
+    </h2>
+    <p class="body anim-up d2" style="font-size:20px; max-width:1165px; margin:0 0 20px 0;">
+      Trust isn't directly measurable, but it shows up in behavior: consent, edits, undo, and day-30 retention.<br/>These are the first signals I'd instrument.
+    </p>
+
+    <div class="anim-up d3" style="margin-top:-8px; display:grid; grid-template-columns: 1fr 1fr 1fr; gap:24px;">
+
+      <!-- Concept 1 -->
+      <div class="card" style="padding:0; overflow:hidden;">
+        <div style="padding:20px 24px; border-bottom:1px solid var(--mist-10); background:rgba(255,72,0,0.04);">
+          <div class="mono" style="color:var(--fire); margin-bottom:6px; font-size:11px;">CONCEPT 01</div>
+          <div class="body-strong" style="font-size:17px;">Before the Call</div>
+        </div>
+        <div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px; border-top:none;">
+            <div class="body-strong" style="font-size:14px;">Context-card open rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Opens context before first ring</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: rising through week 1</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px;">
+            <div class="body-strong" style="font-size:14px;">"How does this know?" taps</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Taps that inspect where context came from</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: curiosity without panic</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px;">
+            <div class="body-strong" style="font-size:14px;">Felt-prepared (qual)</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Survey, week 2</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: improves run over run</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 2 -->
+      <div class="card" style="padding:0; overflow:hidden;">
+        <div style="padding:20px 24px; border-bottom:1px solid var(--mist-10); background:rgba(255,72,0,0.04);">
+          <div class="mono" style="color:var(--fire); margin-bottom:6px; font-size:11px;">CONCEPT 02</div>
+          <div class="body-strong" style="font-size:17px;">During the Call</div>
+        </div>
+        <div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px; border-top:none;">
+            <div class="body-strong" style="font-size:14px;">Assistant invocations</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Press-hold when users need help mid-call</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: used when stuck, not as wallpaper</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px;">
+            <div class="body-strong" style="font-size:14px;">Query completion rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Queries that end with a useful answer</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: few dead-end retries</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:14px 24px;">
+            <div class="body-strong" style="font-size:14px;">Disable rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Users who disable after trying once</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Watch: high = trust failure</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Concept 3 -->
+      <div class="card" style="padding:0; overflow:hidden; border-color:rgba(255,72,0,0.30);">
+        <div style="padding:20px 24px; border-bottom:1px solid var(--mist-10); background:rgba(255,72,0,0.07);">
+          <div class="mono" style="color:var(--fire); margin-bottom:6px; font-size:11px;">CONCEPT 03 · FEATURED</div>
+          <div class="body-strong" style="font-size:17px;">After the Call</div>
+        </div>
+        <div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:12px 24px; border-top:none;">
+            <div class="body-strong" style="font-size:14px;">Consent rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">"Yes" on the Ask</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: consent rises as value lands</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:12px 24px;">
+            <div class="body-strong" style="font-size:14px;">Completion rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Confirmed without abort</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: confirm without bailing mid-flow</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:12px 24px;">
+            <div class="body-strong" style="font-size:14px;">"Always allow" adoption</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Trust-graduation signal</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: grows as trust graduates</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:12px 24px;">
+            <div class="body-strong" style="font-size:14px;">Action accuracy</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">Actions confirmed without edits</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Healthy: edits the exception, not the norm</div>
+          </div>
+          <div class="metric-row" style="grid-template-columns: 1fr; padding:12px 24px;">
+            <div class="body-strong" style="font-size:14px;">Undo rate</div>
+            <div class="body" style="font-size:13px; color:var(--mist-60); margin-top:4px;">High = AI acted too fast</div>
+            <div class="mono" style="color:var(--fire); margin-top:6px; font-size:11px;">Red flag: spikes if AI moves too fast</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="anim-up d4" style="margin-top:20px; padding:16px 28px; border:1px solid var(--mist-10); border-radius:12px; display:flex; gap:32px; align-items:center;">
+      <div class="mono" style="color:var(--fire); flex-shrink:0;">Overarching</div>
+      <div style="flex:1;">
+        <div class="body-strong" style="font-size:18px;">Feature retention at 30 days, the real trust signal.</div>
+        <div class="body" style="font-size:14px; color:var(--mist-60); margin-top:4px;">Everything else is a leading indicator. Day 30 is the verdict.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">14 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 15 - WHAT I'D DO NEXT
+     ======================================================== -->
+<section data-label="15 Next">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">15 / What I'd Do Next</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <h2 class="h-section anim-up d1" style="font-size:56px; margin:0 0 24px 0;">
+      What I deliberately left out, and why.
+    </h2>
+    <p class="body anim-up d2" style="font-size:20px; max-width:1165px; margin:0 0 56px 0;">
+      A take-home is a sketch. Here's what I'd build next, in what order, and which question I'd answer before any of it shipped.
+    </p>
+
+    <!-- Phase timeline -->
+    <div class="anim-up d3" style="position:relative; margin: 0 32px 48px 32px; padding-top:24px;">
+      <div style="position:absolute; left:0; right:0; top:48px; height:1px; background:var(--stroke-dark);"></div>
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:32px; align-items:start; position:relative;">
+        <div style="text-align:center;">
+          <div style="width:14px; height:14px; border-radius:50%; background:var(--fire); margin:0 auto 14px auto; position:relative; z-index:1; box-shadow:0 0 0 6px var(--space);"></div>
+          <div class="mono" style="color:var(--fire); font-size:12px; margin-bottom:4px;">PHASE 01</div>
+          <div class="body-strong" style="font-size:15px;">This case study</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:14px; height:14px; border-radius:50%; background:var(--fire); margin:0 auto 14px auto; opacity:0.55; position:relative; z-index:1; box-shadow:0 0 0 6px var(--space);"></div>
+          <div class="mono" style="color:var(--fire); font-size:12px; margin-bottom:4px; opacity:0.7;">PHASE 02</div>
+          <div class="body" style="font-size:15px; color:var(--mist-70);">Group calls, onboarding</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:14px; height:14px; border-radius:50%; background:transparent; border:1.5px solid var(--mist-30); margin:0 auto 14px auto; position:relative; z-index:1; box-shadow:0 0 0 6px var(--space);"></div>
+          <div class="mono" style="color:var(--mist-50); font-size:12px; margin-bottom:4px;">PHASE 03</div>
+          <div class="body" style="font-size:15px; color:var(--mist-50);">Validation before shipping "always allow"</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:32px;">
+      <div class="anim-up d4">
+        <div class="mono" style="color:var(--fire); margin-bottom:10px;">Onboarding · Not Designed</div>
+        <p class="body" style="font-size:16px; max-width:540px; margin:0;">
+          My hypothesis: the best onboarding for this is the first call. The Ask itself is the tutorial. I'd validate before designing a separate intro flow.
+        </p>
+      </div>
+      <div class="anim-up d4">
+        <div class="mono" style="color:var(--fire); margin-bottom:10px; text-transform:none;">group calls</div>
+        <p class="body" style="font-size:16px; max-width:540px; margin:0;">
+          Attribution gets harder with three voices. The "you said / they said" model needs a rethink; I'd ship 1:1 first and learn.
+        </p>
+      </div>
+      <div class="anim-up d5">
+        <div class="mono" style="color:var(--fire); margin-bottom:10px;">The First Test I'd Run</div>
+        <p class="body" style="font-size:16px; max-width:540px; margin:0;">
+          The exact wording of "Want my help with this call?" - A/B against three alternatives. The phrasing carries half the trust signal.
+        </p>
+      </div>
+      <div class="anim-up d5">
+        <div class="mono" style="color:var(--fire); margin-bottom:10px;">Before shipping "Always Allow"</div>
+        <p class="body" style="font-size:16px; max-width:540px; margin:0;">
+          Do people who opt in come back more? If not, that's a signal to look deeper: is it helping, or quietly hurting the experience?
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="corner-bl mono">15 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 16 - WHY AUI
+     ======================================================== -->
+<section data-label="16 Why AUI">
+  <div class="slide-pad">
+
+    <div class="anim-up d1" style="display:flex; gap:32px; align-items:baseline; margin-bottom:36px;">
+      <div class="section-label">16 / Why AUI</div>
+      <div class="hairline" style="flex:1; max-width:480px; margin-top:14px;"></div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1.3fr 1fr; gap:96px; align-items:center;">
+
+      <div>
+        <h2 class="h-section anim-up d1" style="font-size:56px; margin:0 0 36px 0;">
+          The reliability gap<br/>is a design problem.
+        </h2>
+
+        <p class="anim-up d2" style="font-family:'GT Planar',sans-serif; font-weight:300; font-size:18px; line-height:1.7; color:var(--mist-80); max-width:680px; margin:0 0 24px 0;">
+          AUI is one of the few teams treating AI reliability as the actual product, not a feature to bolt on after a launch event. That framing is rare, and it's what makes the work feel worth doing well.
+        </p>
+
+        <p class="anim-up d3" style="font-family:'GT Planar',sans-serif; font-weight:300; font-size:18px; line-height:1.7; color:var(--mist-80); max-width:680px; margin:0 0 24px 0;">
+          Designing at Vee taught me the delegation gap is rarely a model problem, it's the second the user is asked to hand something over. The model can be right; the moment can still fail. That's where design lives.
+        </p>
+
+        <p class="anim-up d4" style="font-family:'GT Planar',sans-serif; font-weight:300; font-size:18px; line-height:1.7; color:var(--mist-80); max-width:680px; margin:0;">
+          This assignment was my way of exploring that problem through AUI's lens - focusing on trust, control, and the moments where reliability is actually felt.
+        </p>
+      </div>
+
+      <!-- Venn -->
+      <div class="anim-up d3" style="display:flex; justify-content:center;">
+        <svg width="640" height="593" viewBox="0 0 540 500" aria-hidden="true">
+          <circle cx="200" cy="250" r="180" fill="none" stroke="rgba(241,240,224,0.25)" stroke-width="1.5"/>
+          <circle cx="340" cy="250" r="180" fill="none" stroke="rgba(241,240,224,0.25)" stroke-width="1.5"/>
+          <!-- Left lobe only (inside left circle, left of overlap) -->
+          <text x="96" y="232" text-anchor="middle" font-family="Departure Mono" font-size="14" letter-spacing="2" fill="#F1F0E0" opacity="0.75">TECHNICAL</text>
+          <text x="96" y="256" text-anchor="middle" font-family="Departure Mono" font-size="14" letter-spacing="2" fill="#F1F0E0" opacity="0.75">RELIABILITY</text>
+          <!-- Right lobe only (inside right circle, right of overlap) -->
+          <text x="432" y="232" text-anchor="middle" font-family="Departure Mono" font-size="14" letter-spacing="2" fill="#F1F0E0" opacity="0.75">HUMAN</text>
+          <text x="432" y="256" text-anchor="middle" font-family="Departure Mono" font-size="14" letter-spacing="2" fill="#F1F0E0" opacity="0.75">TRUST</text>
+          <!-- Overlap label -->
+          <text x="270" y="252" font-family="F37 Lineca" font-weight="900" font-size="48" fill="#FF4800" text-anchor="middle" letter-spacing="-1">DESIGN</text>
+          <text x="270" y="288" font-family="Departure Mono" font-size="14" letter-spacing="3.2" fill="#FF4800" text-anchor="middle">THE OVERLAP</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="corner-bl mono">16 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+<!-- ========================================================
+     SLIDE 17 - THANK YOU
+     ======================================================== -->
+<section data-label="17 Thank You">
+  <div class="mesh-thank-you"></div>
+  <div class="dot-grid"></div>
+  <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:0.22;mix-blend-mode:overlay">
+    <rect width="100%" height="100%" filter="url(#aui-grain)"/>
+  </svg>
+
+  <div class="corner-tl mono">End</div>
+  <div class="corner-tr mono">2026 / 04</div>
+
+  <div style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:0 120px;">
+    <h1 class="h-display anim-up d2" style="font-size:172px; margin:0;">Thank you.</h1>
+    <div class="anim-up d3" style="margin-top:48px; font-family:'GT Planar',sans-serif; font-weight:300; font-size:26px; color:var(--mist-70);">
+      Maya Harpak · Product Designer · April 2026
+    </div>
+  </div>
+
+  <div class="corner-bl mono">17 / 17</div>
+  <div class="corner-br mono">AUI · Maya Harpak</div>
+</section>
+
+</deck-stage>
+
+<!-- Speaker notes placeholder -->
+
+<script>
+  // Subtle parallax / nothing critical
+</script>
+
+</body>
+</html>
